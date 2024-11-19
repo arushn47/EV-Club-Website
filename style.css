@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    margin: 0 12vmin;
+    background-color: #191919;
+    font-family: "Montserrat", serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+span {
+    color: #7FFF00;
+}
+
+.headings {
+    padding-top: 5vmin;
+    font-size: 7vmin;
+    text-align: center;
+    color: #7FFF00;
+}
+
+button a:hover button{
+    background-color: #FFF;
+    color: black;
+}
+
+.top-btn i{
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: white;
+    color: black;
+    padding: 1.5vmin;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+
+.top-btn i:hover {
+    color: #7FFF00;
+}
+
+/* navbar */
+
+.nav-box {
+    margin: 5vmin 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    cursor: pointer;
+    height: 6vmin;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 7vmin;
+}
+
+.nav-items a{
+    transition: 0.3s ease-in-out;
+}
+
+.nav-items a:hover{
+    color: #7FFF00;
+}
+
+.ham i {
+    cursor: pointer;
+    color: white;
+    font-size: 3vmin;
+}
+
+/* sidebar */
+
+.side-box {
+    position: absolute;
+    top: 12%;
+    right: -300px;
+    z-index: 1000;
+    text-align: center;
+    margin: auto 0;
+    transition: 0.5s ease;
+}
+
+
+.side-box.active {
+    right: 0;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.side-nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10vmin;
+    padding: 12vmin 0;
+}
+
+/* hero-page */
+
+#hero-page {
+    position: relative;
+    height: 70vh;
+}
+
+#hero-page .text {
+    margin-top: 22vmin;
+}
+
+#hero-page .text h1 {
+    font-size: 10vmin;
+}
+
+#hero-page .text h3 {
+    font-size: 5vmin;
+    font-weight: 200;
+}
+
+#hero-page p {
+    position: absolute;
+    top: 33%;
+    right: -27vmin;
+    font-size: 2.7vmin;
+    font-weight: 700;
+    transform: translateY(-50%) rotate(90deg);
+    z-index: 10;
+}
+
+/* .element {
+    position: absolute;
+    bottom: 00px;
+    right: 100px;
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(152, 238, 68, 0.50);
+    filter: blur(100px);
+    z-index: 1;
+} */
+
+#hero-page .image img{
+    position: absolute;
+    bottom: 7vmin;
+    right: 10vmin;
+    height: 35vmin;
+    z-index: 10;
+}
+
+/* About */
+
+#about {
+    padding: 18vmin 0;
+    display: flex;
+}
+
+#about .text {
+    display: flex;
+    flex-direction: column;
+    gap: 5vmin;
+    flex: 0 0 60%;
+    font-size: 3.2vmin;
+    line-height: 40px;
+    text-align: justify;
+}
+
+#about .heading {
+    text-align: center;
+    flex: 0 0 50%;
+    font-size: 5vmin;
+    z-index: 10;
+}
+
+/* events */
+
+#events {
+    height: 100vh;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vmin 0;
+}
+
+.slider {
+    margin-bottom: 5vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    height: 300px;
+}
+
+.swiper-slide:nth-child(3) img{
+    height: 450px;
+    border: 1px solid #7FFF00;
+}
+
+.event-container button {
+    padding: 0.5vmin 2vmin;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.event-container button:hover {
+    background-color: white;
+}
+
+.event-container button a:hover{
+    color: black;
+}
+
+/* team */
+
+.team-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vmin;
+}
+
+.team-container {
+    display: grid;
+    gap: 7vmin;
+    margin-bottom: 5vmin;
+}
+
+.first-row {
+    margin-top: 5vmin;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.rest-rows {
+    margin-top: 5vmin;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.team-member {
+    text-align: center;
+}
+
+.profile-pic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-pic {
+    margin-bottom: 2vmin;
+}
+
+.name {
+    font-size: 2.3vmin;
+    font-weight: bold;
+}
+
+.role {
+    margin-top: 0.3vmin;
+    font-size: 2.1vmin;
+    color: gray;
+}
+
+.team-page button {
+    padding: 5px 20px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    color: #FFF; 
+    transition: 0.3s ease;
+}
+
+.team-page button:hover {
+    background-color: white;
+}
+
+.team-page button a:hover{
+    color: black;
+}
+
+/* contact */
+
+#contact {
+    height: 80vh;
+}
+
+#contact .contacts {
+    margin-top: 15vmin;
+    display: flex;
+    flex: 1 1 50%;
+}
+
+#contact .student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 50%;
+    gap: 5vmin;
+}
+
+#contact .student h1,
+#contact .faculty h1{
+    font-size: 3.5vmin;
+    border-bottom: 1px solid #7FFF00;
+    margin-bottom: 2vmin;
+    padding-bottom: 10px;
+}
+
+
+#contact .student p,
+#contact .faculty p{
+    font-size: 2.6vmin;
+}
+
+#contact .faculty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 50%;
+    gap: 5vmin;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+footer .logo{
+    position: absolute;
+    margin-left: 100px;
+    left: 0;
+}
+
+.outro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

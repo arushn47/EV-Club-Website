@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background-color: #191919;
+    font-family: "Montserrat", serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.heading {
+    padding: 5vmin 0;
+    font-size: 7vmin;
+    text-align: center;
+    color: #7FFF00;
+}
+
+.batches {
+    margin: 0 10vmin;
+    display: flex;
+    gap: 2vmin;
+}
+
+.batch {
+    cursor: pointer;
+    display: flex;
+    padding: 1vmin 2vmin;
+    border: 2px solid #7FFF00;
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+
+.batch:hover,
+.batch.active {
+    background-color: #7FFF00;
+    color: black;
+    font-weight: 700;
+}
+
+/* team page */
+
+#team-page {
+    display: flex;
+    flex-direction: column;
+    padding: 10vmin;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7vmin;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable {
+    display: flex;
+    gap: 5vmin;
+    max-height: 100%;
+    overflow-x: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.team-member {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 250px;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile-pic {
+    margin-bottom: 2vmin;
+}
+
+.name {
+    font-size: 2.3vmin;
+    font-weight: bold;
+}
+
+.role {
+    margin-top: 0.3vmin;
+    margin-bottom: 3vmin;
+    font-size: 2.1vmin;
+    color: gray;
+}
+
+.team-page button {
+    padding: 5px 20px;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    color: #FFF;
+    transition: 0.3s ease;
+}
+
+.team-page button:hover {
+    background-color: white;
+}
+
+.team-page button a:hover {
+    color: black;
+}
+
+/* footer */
+
+footer {
+    bottom: 0;
+    color: black;
+    background-color: #7FFF00;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.info {
+    text-align: left;
+}
+
+.info p {
+    font-size: 15px;
+}
+
+.contact {
+    flex: 0 0 25%;
+}
+
+.nav {
+    margin: 5vmin 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+
+.nav a {
+    color: black;
+    padding: 0 5vmin;
+    font-weight: bold;
+}
+
+/* contact */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    text-align: left;
+}
+
+.outro p {
+    text-align: center;
+    margin-bottom: 3vmin;
+}
+
+footer h1 {
+    font-size: 25px;
+    margin-bottom: 1vmin;
+}

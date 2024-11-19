@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/assets/EV Logo.png">
     <title>Certificate - EV Club</title>
     <link rel="stylesheet" href="certificate.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,17 +14,21 @@
 <body>
     <h1 class="heading">Certificates</h1>
     <div class="content-container">
-        <div class="letter-info">
+        <div class="certificate-info">
             <form>
                 <select id="event-name">
-                    <option>Event Name</option>
-                    <option>ROBOX</option>
+                    <option value="ROBOX">Event Name</option>
+                    <option value="ROBOX">ROBOX</option>
                 </select>
+
                 <input id="regno" type="text" placeholder="Registration No.">
-                <button>Search</button>
+                <div class="btn">
+                    <button id="searchBtn">Search</button>
+                    <button id="downloadBtn" style="display: none;">Download</button>
+                </div>
             </form>
         </div>
-        <div class="letter-img"><img></div>
+        <div class="certificate-img"><img></div>
         
     </div>
 
@@ -50,5 +55,7 @@
             <p>Copyright © 2024 the Electric Vehicle Club. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="certificate.js"></script>
 </body>
 </html>

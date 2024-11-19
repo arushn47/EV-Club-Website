@@ -28,17 +28,17 @@ a {
 }
 
 .content-container {
-    margin: 20vmin 30vmin;
+    margin: 15vmin 30vmin;
     display: flex;
 }
 
-.letter-img, .letter-info {
+.certificate-img, .certificate-info {
     flex: 1 1 50%;
 }
 
-.letter-img img {
-    height: 400px;
-    width: 500px;
+.certificate-img img {
+    height: 425px;
+    width: 600px;
     background-color: white;
     object-fit: cover;
     box-shadow: 0 2px 10px #7FFF00;
@@ -46,7 +46,7 @@ a {
     transition: transform 0.3s ease; 
 }
 
-.letter-info form {
+.certificate-info form {
     margin-top: 20vmin;
     width: fit-content;
     display: flex;
@@ -56,32 +56,39 @@ a {
     gap: 3vmin;
 }
 
-.letter-info form select {
+.certificate-info form select {
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 1vmin;
     width: 315px;
     color: white;
+    font-family: "Montserrat", serif;
 }
 
-.letter-info form input {
+
+.certificate-info form select:focus  {
+    background-color: #303030;
+}
+
+.certificate-info form input {
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 1vmin;
     width: 300px;
     color: white;
+    font-family: "Montserrat", serif;
 }
 
-.letter-info form button {
+.certificate-info form button {
+    font-family: "Montserrat", serif;
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 10px;
     padding: 1vmin;
 }
-
 
 /* footer */
 
@@ -104,7 +111,6 @@ footer {
 .info {
     text-align: left;
 }
-
 
 .info p {
     font-size: 15px;

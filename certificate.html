@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/images/assets/EV Logo.png">
     <title>Certificate - EV Club</title>
     <link rel="stylesheet" href="certificate.css">
@@ -12,7 +15,23 @@
         rel="stylesheet">
 </head>
 <body>
-    <h1 class="heading">Certificates</h1>
+    <header id="header">
+        <div class="backBtn"><a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a></div> 
+        <div class="heading"><h1>Event Certificate</h1></div>
+        <div class="ham"><i class="fa-solid fa-bars"></i></div>
+        <nav class="side-box">
+            <div class="sidebar">
+                <div class="side-nav-items">
+                    <a href="/events.html">Upcoming Events</a>
+                    <a href="/certificate.html">Event Certificate</a>
+                    <a href="/appointment.html">Appointment Letter</a>
+                    <a href="/newsletter.html">Newsletters</a>
+                    <a href="/form.html">Join Our Team</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="content-container">
         <div class="certificate-info">
             <form>
@@ -56,6 +75,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="certificate.js"></script>
 </body>
 </html>

@@ -20,8 +20,67 @@ a {
     color: white;
 }
 
-.heading {
-    padding-top: 5vmin;
+
+header {
+    margin-top: 5vmin;
+    padding: 0 10vmin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*sidebar*/
+
+.backBtn i {
+    cursor: pointer;
+    background-color: #7FFF00;
+    color: black;
+    font-size: 3vmin;
+    padding: 1.5vmin;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.backBtn i:hover {
+    scale: 1.1;
+}
+
+.ham i {
+    cursor: pointer;
+    color: white;
+    font-size: 3vmin;
+}
+
+.side-box {
+    position: absolute;
+    top: 12%;
+    right: -300px;
+    z-index: 1000;
+    text-align: center;
+    margin: auto 0;
+    transition: 0.5s ease;
+}
+
+.side-box.active {
+    right: 0;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.side-nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10vmin;
+    padding: 12vmin 0;
+}
+
+.heading h1{
     font-size: 7vmin;
     text-align: center;
     color: #7FFF00;
@@ -32,7 +91,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 10vmin;
-    margin-top: 5vmin;
 }
 
 .swiper-slide {
@@ -45,7 +103,7 @@ a {
 }
 
 .swiper-slide img {
-    height: 500px;
+    height: 450px;
     width: 100%;
     object-fit: cover;
     box-shadow: 1px 1px 10px #7FFF00;
@@ -55,6 +113,10 @@ a {
 
 .swiper-slide img:hover {
     transform: scale(1.01);
+}
+
+.event-container {
+    margin: 10vmin 0;
 }
 
 .event-container button {

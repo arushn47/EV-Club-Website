@@ -20,8 +20,82 @@ a {
     color: white;
 }
 
-.heading {
-    padding: 5vmin 0;
+header {
+    margin-top: 5vmin;
+    padding: 0 10vmin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-btn i {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: white;
+    color: black;
+    padding: 1.5vmin;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.top-btn i:hover {
+    color: #7FFF00;
+}
+
+/*sidebar*/
+
+.backBtn i {
+    cursor: pointer;
+    background-color: #7FFF00;
+    color: black;
+    font-size: 3vmin;
+    padding: 1.5vmin;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.backBtn i:hover {
+    scale: 1.1;
+}
+
+.ham i {
+    cursor: pointer;
+    color: white;
+    font-size: 3vmin;
+}
+
+.side-box {
+    position: absolute;
+    top: 12%;
+    right: -300px;
+    z-index: 1000;
+    text-align: center;
+    margin: auto 0;
+    transition: 0.5s ease;
+}
+
+.side-box.active {
+    right: 0;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.side-nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10vmin;
+    padding: 12vmin 0;
+}
+
+.heading h1{
     font-size: 7vmin;
     text-align: center;
     color: #7FFF00;
@@ -30,9 +104,15 @@ a {
 .batches {
     margin: 0 10vmin;
     display: flex;
+    align-items: center;
     gap: 2vmin;
 }
 
+.members {
+    margin: 2vmin 10vmin;
+    font-size: 25px;
+    font-weight: 300;
+}
 .batch {
     cursor: pointer;
     display: flex;

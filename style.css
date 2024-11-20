@@ -10,16 +10,30 @@ html {
 body {
     max-height: 100vh;
     max-width: 100vw;
-    margin: 0 12vmin;
     background-color: #191919;
     font-family: "Montserrat", serif;
     color: white;
     overflow-x: hidden;
 }
 
+.content-wrapper {
+    margin: 0 12vmin;
+}
+
 a {
     text-decoration: none;
     color: white;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-family: "Montserrat", serif;
+}
+
+button :hover {
+    background-color: #FFF;
+    color: black;
 }
 
 span {
@@ -33,12 +47,7 @@ span {
     color: #7FFF00;
 }
 
-button a:hover button{
-    background-color: #FFF;
-    color: black;
-}
-
-.top-btn i{
+.top-btn i {
     cursor: pointer;
     display: none;
     position: fixed;
@@ -51,21 +60,26 @@ button a:hover button{
     transition: 0.3s ease;
 }
 
-
 .top-btn i:hover {
     color: #7FFF00;
 }
 
 /* navbar */
 
-.nav-box {
-    margin: 5vmin 0;
+.navbar {
+    width: 100%;
+    padding: 35px 0;
+    background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 998;
+    transition: 0.5s;
+    box-sizing: border-box;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar ul li {
+    list-style: none;
 }
 
 .logo img {
@@ -79,11 +93,11 @@ button a:hover button{
     gap: 7vmin;
 }
 
-.nav-items a{
+.nav-items a {
     transition: 0.3s ease-in-out;
 }
 
-.nav-items a:hover{
+.nav-items a:hover {
     color: #7FFF00;
 }
 
@@ -98,7 +112,7 @@ button a:hover button{
 .side-box {
     position: fixed;
     top: 12%;
-    right: -40vmin;
+    right: -300px;
     z-index: 1000;
     text-align: center;
     margin: auto 0;
@@ -125,6 +139,14 @@ button a:hover button{
     padding: 12vmin 0;
 }
 
+.side-nav-items a {
+    transition: 0.4s ease;
+}
+
+.side-nav-items a:hover {
+    color: #7FFF00;
+}
+
 /* hero-page */
 
 #hero-page {
@@ -133,7 +155,7 @@ button a:hover button{
 }
 
 #hero-page .text {
-    margin-top: 22vmin;
+    margin-top: 18vmin;
 }
 
 #hero-page .text h1 {
@@ -147,7 +169,7 @@ button a:hover button{
 
 #hero-page p {
     position: absolute;
-    top: 33%;
+    top: 28%;
     right: -27vmin;
     font-size: 2.7vmin;
     font-weight: 700;
@@ -168,7 +190,7 @@ button a:hover button{
     z-index: 1;
 } */
 
-#hero-page .image img{
+#hero-page .image img {
     position: absolute;
     bottom: 7vmin;
     right: 10vmin;
@@ -202,10 +224,6 @@ button a:hover button{
 
 /* events */
 
-#events {
-    height: 100vh;
-}
-
 .event-container {
     display: flex;
     flex-direction: column;
@@ -221,26 +239,26 @@ button a:hover button{
 }
 
 .swiper-slide img {
-    height: 300px;
+    height: 40vmin;
 }
 
-.swiper-slide:nth-child(3) img{
-    height: 450px;
+.swiper-slide:nth-child(3) img {
+    height: 60vmin;
     border: 1px solid #7FFF00;
 }
 
-.event-container button {
+.event-container button a{
     padding: 0.5vmin 2vmin;
     border: 1px solid #FFF;
     background-color: transparent;
     transition: 0.3s ease;
 }
 
-.event-container button:hover {
+.event-container button a:hover {
     background-color: white;
 }
 
-.event-container button a:hover{
+.event-container button a:hover {
     color: black;
 }
 
@@ -273,7 +291,7 @@ button a:hover button{
     text-align: center;
 }
 
-.profile-pic img{
+.profile-pic img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -294,27 +312,24 @@ button a:hover button{
     color: gray;
 }
 
-.team-page button {
+.team-page button a{
     padding: 5px 20px;
     border: 1px solid #FFF;
     background-color: transparent;
-    color: #FFF; 
+    color: #FFF;
     transition: 0.3s ease;
 }
 
-.team-page button:hover {
+.team-page button a:hover {
     background-color: white;
 }
 
-.team-page button a:hover{
+.team-page button a:hover {
     color: black;
 }
 
 /* contact */
 
-#contact {
-    height: 80vh;
-}
 
 #contact .contacts {
     margin-top: 15vmin;
@@ -331,7 +346,7 @@ button a:hover button{
 }
 
 #contact .student h1,
-#contact .faculty h1{
+#contact .faculty h1 {
     font-size: 3.5vmin;
     border-bottom: 1px solid #7FFF00;
     margin-bottom: 2vmin;
@@ -340,7 +355,7 @@ button a:hover button{
 
 
 #contact .student p,
-#contact .faculty p{
+#contact .faculty p {
     font-size: 2.6vmin;
 }
 
@@ -355,23 +370,95 @@ button a:hover button{
 /* footer */
 
 footer {
+    left: 0;
+    bottom: 0;
+    margin-top: 15vmin;
+    color: black;
+    background-color: #7FFF00;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.info {
+    text-align: left;
+}
+
+.info p {
+    font-size: 15px;
+}
+
+.contact {
+    flex: 0 0 25%;
+}
+
+.nav {
+    margin: 5vmin 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.nav a {
+    color: black;
+    padding: 0 5vmin;
+    font-weight: bold;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    text-align: left;
+}
+
+.outro p {
+    text-align: center;
+    margin-bottom: 3vmin;
+}
+
+footer h1 {
+    font-size: 25px;
+    margin-bottom: 1vmin;
+}
+
+/*loader*/
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding-bottom: 50px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 1;
+    z-index: 1000;
 }
 
-
-footer .logo{
-    position: absolute;
-    margin-left: 100px;
-    left: 0;
+.loader-container span {
+    opacity: 0;
 }
 
-.outro {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.loader-container .space {
+    display: inline-block;
+    width: 10px;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
 }

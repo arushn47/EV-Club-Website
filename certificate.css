@@ -28,6 +28,23 @@ header {
     align-items: center;
 }
 
+.top-btn i {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: white;
+    color: black;
+    padding: 1.5vmin;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.top-btn i:hover {
+    color: #7FFF00;
+}
+
 /*sidebar*/
 
 .backBtn i {

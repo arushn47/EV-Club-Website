@@ -96,13 +96,13 @@ button a:hover button{
 /* sidebar */
 
 .side-box {
-    position: absolute;
+    position: fixed;
     top: 12%;
     right: -40vmin;
     z-index: 1000;
     text-align: center;
     margin: auto 0;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 

@@ -9,6 +9,7 @@ html {
 
 body {
     height: 100vh;
+    width: 100vw;
     margin: 0 12vmin;
     background-color: #191919;
     font-family: "Montserrat", serif;

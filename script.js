@@ -1,6 +1,7 @@
 const ham = document.querySelector(".ham");
 const sidebar = document.querySelector(".side-box");
 const topBtn = document.querySelector(".top-btn i");
+const homeBtn = document.querySelector(".home");
 
 ham.addEventListener("click", () => {
     sidebar.classList.toggle('active');
@@ -22,9 +23,12 @@ window.onscroll = function () {
 
     else {
         topBtn.style.display = "none";
-        
     }
 };
+
+homeBtn.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+});
 
 topBtn.addEventListener("click", () => {
     window.scrollTo(0, 0);

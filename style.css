@@ -204,6 +204,7 @@ span {
 #about {
     padding: 18vmin 0;
     display: flex;
+    gap: 7vmin;
 }
 
 #about .text {
@@ -212,13 +213,13 @@ span {
     gap: 5vmin;
     flex: 0 0 60%;
     font-size: 3.2vmin;
-    line-height: 40px;
+    line-height: 5vmin;
     text-align: justify;
 }
 
 #about .heading {
     text-align: center;
-    flex: 0 0 50%;
+    flex: 0 0 40%;
     font-size: 5vmin;
     z-index: 10;
 }
@@ -233,6 +234,7 @@ span {
 }
 
 .slider {
+    margin: 0 20vmin;
     margin-bottom: 5vmin;
     display: flex;
     align-items: center;
@@ -249,6 +251,7 @@ span {
 }
 
 .event-container button a{
+    font-size: 2vmin;
     padding: 0.5vmin 2vmin;
     border: 1px solid #FFF;
     background-color: transparent;
@@ -269,23 +272,31 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10vmin;
+    padding: 2vmin;
+    margin-top: 2vmin;
 }
 
 .team-container {
-    display: grid;
+    display: flex;
     gap: 7vmin;
     margin-bottom: 5vmin;
 }
 
 .first-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 5vmin;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .rest-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 5vmin;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
 }
 
 .team-member {
@@ -293,8 +304,8 @@ span {
 }
 
 .profile-pic img {
-    width: 200px;
-    height: 200px;
+    width: 30vmin;
+    height: 30vmin;
     border-radius: 50%;
 }
 
@@ -308,13 +319,15 @@ span {
 }
 
 .role {
+    width: 30vmin;
     margin-top: 0.3vmin;
     font-size: 2.1vmin;
     color: gray;
 }
 
 .team-page button a{
-    padding: 5px 20px;
+    font-size: 2vmin;
+    padding: 0.5vmin 2vmin;
     border: 1px solid #FFF;
     background-color: transparent;
     color: #FFF;
@@ -331,42 +344,42 @@ span {
 
 /* contact */
 
-
 #contact .contacts {
     margin-top: 15vmin;
     display: flex;
-    flex: 1 1 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10vmin;
 }
 
 #contact .student {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 1 50%;
     gap: 5vmin;
-}
-
-#contact .student h1,
-#contact .faculty h1 {
-    font-size: 3.5vmin;
-    border-bottom: 1px solid #7FFF00;
-    margin-bottom: 2vmin;
-    padding-bottom: 10px;
-}
-
-
-#contact .student p,
-#contact .faculty p {
-    font-size: 2.6vmin;
 }
 
 #contact .faculty {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 1 50%;
     gap: 5vmin;
 }
+
+#contact .student h1,
+#contact .faculty h1 {
+    font-size: 3.5vmin;
+    border-bottom: 0.2vmin solid #7FFF00;
+    margin-bottom: 2vmin;
+    padding-bottom: 10px;
+}
+
+#contact .student p,
+#contact .faculty p {
+    font-size: 2.6vmin;
+}
+
 
 /* footer */
 
@@ -389,14 +402,16 @@ footer {
 
 .info {
     text-align: left;
+    flex: 0 0 27%;
+}
+
+.info h1 {
+    font-size: 3.3vmin;
+    margin-bottom: 1vmin;
 }
 
 .info p {
-    font-size: 15px;
-}
-
-.contact {
-    flex: 0 0 25%;
+    font-size: 1.9vmin;
 }
 
 .nav {
@@ -409,6 +424,7 @@ footer {
 }
 
 .nav a {
+    font-size: 2vmin;
     color: black;
     padding: 0 5vmin;
     font-weight: bold;
@@ -416,19 +432,24 @@ footer {
 
 .contact {
     display: flex;
+    flex: 0 0 25%;
     flex-direction: column;
-    gap: 2vmin;
+    gap: 1.5vmin;
     text-align: left;
 }
 
-.outro p {
-    text-align: center;
-    margin-bottom: 3vmin;
+.contact h1 {
+    font-size: 3vmin;
 }
 
-footer h1 {
-    font-size: 25px;
-    margin-bottom: 1vmin;
+.contact p {
+    font-size: 1.8vmin;
+}
+
+.outro p {
+    font-size: 1.8vmin;
+    text-align: center;
+    margin-bottom: 3vmin;
 }
 
 /*loader*/
@@ -437,14 +458,14 @@ footer h1 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 30px;
+    font-size: 3vmin;
     font-weight: bold;
     opacity: 1;
     z-index: 1000;
@@ -456,10 +477,41 @@ footer h1 {
 
 .loader-container .space {
     display: inline-block;
-    width: 10px;
+    width: 1vmin;
 }
 
 .no-scroll {
     overflow: hidden;
     height: 100%;
+}
+
+@media (max-width:650px) {
+    #about .text {
+        font-size: 2.2vmin;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    .logo img {
+        height: 9vmin;
+    }
+
+    .ham i {
+        font-size: 6vmin;
+    }
+    
+    .slider {
+        flex-direction: column;
+    }
+
+    #about {
+        flex-direction: column;
+        gap: 5vmin;
+    }
+    
+    #about .heading {
+        order: -1;
+    }
 }

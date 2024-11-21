@@ -1,10 +1,22 @@
 const ham = document.querySelector(".ham");
 const sidebar = document.querySelector(".side-box");
-const topBtn = document.querySelector(".top-btn i");
-const homeBtn = document.querySelector(".home");
+const close = document.querySelector(".fa-xmark");
+const homeBtn = document.querySelector('.home');
+const topBtn = document.querySelector('.top-btn i');
+
+
 
 ham.addEventListener("click", () => {
     sidebar.classList.toggle('active');
+
+    if (window.innerWidth <= 400 && sidebar.classList.contains("active")) {
+        close.style.display = close.style.display === "inline-block" ? "none" : "inline-block";
+    }
+});
+
+close.addEventListener("click", () => {
+    sidebar.classList.toggle('active');
+    close.style.display = close.style.display === "inline-block" ? "none" : "inline-block";
 });
 
 window.onscroll = function () {
@@ -18,6 +30,7 @@ window.onscroll = function () {
     if (currentScrollTop > lastScrollTop) {
         if (sidebar.classList.contains("active")) {
             sidebar.classList.toggle('active');
+            close.style.display = "none";
         }
     }
 
@@ -26,6 +39,7 @@ window.onscroll = function () {
     }
 };
 
+
 homeBtn.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
@@ -33,6 +47,7 @@ homeBtn.addEventListener("click", () => {
 topBtn.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
+
 
 window.onload = function () {
     document.body.classList.add('no-scroll');

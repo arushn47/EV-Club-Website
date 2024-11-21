@@ -8,7 +8,8 @@ html {
 }
 
 body {
-    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
     background-color: #191919;
     font-family: "Montserrat", serif;
     color: black;
@@ -90,8 +91,9 @@ a {
 /* footer */
 
 footer {
+    left: 0;
     bottom: 0;
-    margin-top: 10vmin;
+    margin-top: 15vmin;
     color: black;
     background-color: #7FFF00;
     display: flex;
@@ -106,16 +108,35 @@ footer {
 }
 
 .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
     text-align: left;
 }
 
-
-.info p {
-    font-size: 15px;
+.info h1 {
+    font-size: 3.5vmin;
 }
 
-.contact {
-    flex: 0 0 25%;
+.info p {
+    font-size: 2vmin;
+    margin-bottom: 1vmin;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    gap: 2vmin;
+}
+
+.socials i{
+    font-size: 2.2vmin;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.socials i:hover {
+    color: white;
 }
 
 .nav {
@@ -127,28 +148,37 @@ footer {
     border-right: 3px solid black;
 }
 
-
 .nav a {
+    font-size: 2vmin;
     color: black;
     padding: 0 5vmin;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
-/* contact */
+
+.nav a:hover {
+    color: white;
+}
 
 .contact {
     display: flex;
+    flex: 0 0 25%;
     flex-direction: column;
-    gap: 2vmin;
+    gap: 1.5vmin;
     text-align: left;
 }
 
-.outro p{
-    text-align: center;
-    margin-bottom: 3vmin;
+.contact h1 {
+    font-size: 3.5vmin;
 }
 
-footer h1 {
-    font-size: 25px;
-    margin-bottom: 1vmin;
+.contact p {
+    font-size: 2vmin;
+}
+
+.outro p {
+    font-size: 2vmin;
+    text-align: center;
+    margin-bottom: 3vmin;
 }

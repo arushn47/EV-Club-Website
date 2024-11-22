@@ -119,6 +119,11 @@ header {
     text-align: center;
 }
 
+.newsletter h1 {
+    font-weight: bold;
+    font-size: 4vmin;
+}
+
 .newsletter img {
     height: 500px;
     width: 100%;

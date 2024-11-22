@@ -73,7 +73,7 @@ span {
 }
 
 .top-btn i:hover {
-    background-color: #7FFF00;
+    color: #7FFF00;
 }
 
 /* navbar */
@@ -114,20 +114,24 @@ span {
     color: #7FFF00;
 }
 
-.ham i {
+.ham-open i {
     cursor: pointer;
     color: white;
     font-size: 3vmin;
 }
 
-.fa-xmark {
+.ham-close i {
     cursor: pointer;
     display: none;
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 39px;
+    right: 27px;
     z-index: 1001;
     font-size: 8vmin;
+}
+
+.ham-close i.active {
+    display: inline-block;
 }
 
 /* sidebar */
@@ -147,7 +151,7 @@ span {
 
 .sidebar {
     width: 260px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -188,7 +192,7 @@ span {
 }
 
 #hero-page .text h3 {
-    font-size: 5vmin;
+    font-size: 3.5vmin;
     font-weight: 200;
 }
 
@@ -227,8 +231,8 @@ span {
 /* About */
 
 #about {
-    margin-top: 15vmin;
-    padding: 10vmin 0;
+    margin-top: 12vmin ;
+    padding: 20vmin 0;
     display: flex;
     gap: 7vmin;
 }
@@ -277,7 +281,6 @@ span {
 }
 
 .event-container button a{
-    font-size: 2vmin;
     padding: 0.5vmin 2vmin;
     border: 1px solid #FFF;
     background-color: transparent;
@@ -530,6 +533,22 @@ footer {
     width: 2.5vmin;
 }
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* for mobile devices */
 
 @media (max-width:820px) {
@@ -540,10 +559,6 @@ footer {
 
     #hero-page .text {
         margin-top: 4vmin;
-    }
-
-    #hero-page .text h1 {
-        font-size: 5vmin;
     }
 
     #hero-page .image img {
@@ -585,7 +600,7 @@ footer {
         height: 9vmin;
     }
 
-    .ham i {
+    .ham-open i {
         font-size: 6vmin;
     }
     
@@ -620,10 +635,18 @@ footer {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
+
+    .content-wrapper {
+        margin: 0 8vmin;
+    }
 
     .side-box {
         top: 0%;
+    }
+
+    .side-nav-items {
+        gap: 11vmin;
     }
 
     .sidebar {
@@ -632,10 +655,6 @@ footer {
         align-items: center;
         height: 100vh;
         width: 100vw;
-    }
-
-    .side-nav-items {
-        gap: 13vmin;
     }
 
     .top-btn i {

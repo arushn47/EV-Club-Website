@@ -9,16 +9,24 @@
     <link rel="icon" href="/images/assets/EV Logo.png">
     <title>Upcoming Events - EV Club</title>
     <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
 <body>
+    
+    <div class="top-btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    
+    <div class="ham-close"><i class="fa-solid fa-xmark"></i></div>
+
     <header id="header">
         <div class="backBtn"><a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a></div> 
         <div class="heading"><h1 class="heading">Upcoming Events</h1></div>
-        <div class="ham"><i class="fa-solid fa-bars"></i></div>
+        <div class="ham-open"><i class="fa-solid fa-bars"></i></div>
         <nav class="side-box">
             <div class="sidebar">
                 <div class="side-nav-items">
@@ -33,15 +41,12 @@
     </header>
 
     <div class="event-container">
-        <div class="slider">
-            <div class="swiper-slide">
-                <img src="images/Posters/ROBOX.png" alt="">
-                <button><a href="#">See Details</a></button>
+        <div class="events">
+            <div class="event">
+                <div class="image"><img src="images/Posters/RoboSoccer.png"></div>
+                <div class="details"><a><h1>See Details</h1></a></div>
             </div>
-            <div class="swiper-slide">
-                <img src="images/Posters/Techfest.jpg" alt="">
-                <button><a href="#">See Details</a></button>
-            </div>
+            <button><a href="https://forms.gle/ozLsjnRxEaar1n2o7" target="_blank">Register</a></button>
         </div>
     </div>
 

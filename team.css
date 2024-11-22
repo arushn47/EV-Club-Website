@@ -59,7 +59,7 @@ header {
 }
 
 .backBtn i:hover {
-    scale: 1.1;
+    transform: translateX(-5px);
 }
 
 .ham i {
@@ -174,8 +174,8 @@ header {
 }
 
 .profile-pic img {
-    width: 200px;
-    height: 200px;
+    width: 30vmin;
+    height: 30vmin;
     border-radius: 50%;
 }
 

@@ -21,6 +21,9 @@ a {
     color: white;
 }
 
+.hidden {
+    display: none;
+}
 
 header {
     margin-top: 5vmin;
@@ -31,6 +34,23 @@ header {
 }
 
 /*sidebar*/
+
+.top-btn i {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background-color: white;
+    color: black;
+    padding: 1.3vmin 1.6vmin;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.top-btn i:hover {
+    background-color: #7FFF00;
+}
 
 .backBtn i {
     cursor: pointer;
@@ -43,23 +63,34 @@ header {
 }
 
 .backBtn i:hover {
-    scale: 1.1;
+    transform: translateX(-5px);
 }
 
-.ham i {
+.ham-open i {
     cursor: pointer;
     color: white;
     font-size: 3vmin;
 }
 
-.side-box {
+.ham-close i {
+    cursor: pointer;
+    display: none;
     position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 1001;
+    font-size: 8vmin;
+}
+
+/* sidebar */
+
+.side-box {
+    position: fixed;
     top: 12%;
-    right: -300px;
+    right: -400px;
     z-index: 1000;
     text-align: center;
-    margin: auto 0;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .side-box.active {
@@ -67,7 +98,7 @@ header {
 }
 
 .sidebar {
-    width: 280px;
+    width: 260px;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border-top-left-radius: 20px;
@@ -78,34 +109,41 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10vmin;
+    list-style: none;
     padding: 12vmin 0;
+}
+
+.side-nav-items li a {
+    transition: 0.4s ease;
+}
+
+.side-nav-items a:hover {
+    color: #7FFF00;
 }
 
 /* appointment */
 
 .heading h1{
     font-size: 7vmin;
-    text-align: center;
     color: #7FFF00;
 }
 
 .content-container {
-    margin: 10vmin 40vmin;
+    margin: 8vmin;
     display: flex;
-}
-
-.letter-img, .letter-info {
-    flex: 1 1 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .letter-img img {
-    height: 500px;
-    width: 350px;
+    height: 70vmin;
+    width: 50vmin;
     background-color: white;
     object-fit: cover;
     box-shadow: 0 1px 10px #7FFF00;
     border-radius: 5px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .letter-info form {
@@ -117,6 +155,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 3vmin;
+    order: -1;
 }
 
 .letter-info form input {
@@ -126,7 +165,7 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 1vmin;
-    width: 300px;
+    width: 40vmin;
 }
 
 .btn button {
@@ -148,12 +187,12 @@ header {
     color: black;
 }
 
-
 /* footer */
 
 footer {
+    left: 0;
     bottom: 0;
-    margin-top: 10vmin;
+    margin-top: 15vmin;
     color: black;
     background-color: #7FFF00;
     display: flex;
@@ -161,23 +200,44 @@ footer {
 }
 
 .container {
+    padding: 5vmin;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    gap: 7vmin;
 }
 
 .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
     text-align: left;
 }
 
-
-.info p {
-    font-size: 15px;
+.info h1 {
+    font-size: 3.5vmin;
 }
 
-.contact {
-    flex: 0 0 25%;
+.info p {
+    font-size: 2vmin;
+    margin-bottom: 1vmin;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    gap: 2vmin;
+}
+
+.socials i{
+    font-size: 2.2vmin;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.socials i:hover {
+    color: white;
 }
 
 .nav {
@@ -189,28 +249,95 @@ footer {
     border-right: 3px solid black;
 }
 
-
 .nav a {
+    font-size: 2vmin;
     color: black;
     padding: 0 5vmin;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
-/* contact */
+
+.nav a:hover {
+    color: white;
+}
 
 .contact {
     display: flex;
+    flex: 0 0 25%;
     flex-direction: column;
-    gap: 2vmin;
+    gap: 1.5vmin;
     text-align: left;
 }
 
-.outro p{
+.contact h1 {
+    font-size: 3.5vmin;
+}
+
+.contact p {
+    font-size: 2vmin;
+}
+
+.outro p {
+    font-size: 2vmin;
     text-align: center;
     margin-bottom: 3vmin;
 }
 
-footer h1 {
-    font-size: 25px;
-    margin-bottom: 1vmin;
+@media (max-width: 958px) {
+    header {
+        margin-top: 5vmin;
+        padding: 0 10vmin;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .letter-info {
+        order: -1;
+    }
+
+    .heading h1{
+        font-size: 5vmin;
+    }   
+    .container .nav {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+    header {
+        margin-top: 10vmin;
+        padding: 0 7vmin;
+    }
+
+    .ham i {
+        font-size: 2vmin;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .side-box {
+        top: 0%;
+    }
+
+    .sidebar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .side-nav-items {
+        gap: 13vmin;
+    }
+
+    .top-btn i {
+        right: 15px;
+        bottom: 15px;
+    }
 }

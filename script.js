@@ -1,22 +1,22 @@
-const ham = document.querySelector(".ham");
+const ham_open = document.querySelector(".ham-open");
+const ham_close = document.querySelector(".ham-close i");
 const sidebar = document.querySelector(".side-box");
-const close = document.querySelector(".fa-xmark");
-const homeBtn = document.querySelector('.home');
+const homeBtn = document.querySelectorAll('.home');
 const topBtn = document.querySelector('.top-btn i');
 
-
-
-ham.addEventListener("click", () => {
+ham_open.addEventListener("click", () => {
     sidebar.classList.toggle('active');
 
     if (window.innerWidth <= 400 && sidebar.classList.contains("active")) {
-        close.style.display = close.style.display === "inline-block" ? "none" : "inline-block";
+        ham_close.classList.add('active');
+    } else {
+        ham_close.classList.remove('active');
     }
 });
 
-close.addEventListener("click", () => {
-    sidebar.classList.toggle('active');
-    close.style.display = close.style.display === "inline-block" ? "none" : "inline-block";
+ham_close.addEventListener("click", () => {
+    sidebar.classList.remove('active');
+    ham_close.classList.remove('active');
 });
 
 window.onscroll = function () {
@@ -30,7 +30,7 @@ window.onscroll = function () {
     if (currentScrollTop > lastScrollTop) {
         if (sidebar.classList.contains("active")) {
             sidebar.classList.toggle('active');
-            close.style.display = "none";
+            ham_close.classList.remove('active');
         }
     }
 
@@ -39,15 +39,15 @@ window.onscroll = function () {
     }
 };
 
-
-homeBtn.addEventListener("click", () => {
-    window.scrollTo(0, 0);
+homeBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        window.scrollTo(0, 0);
+    })
 });
 
 topBtn.addEventListener("click", () => {
-    window.scrollTo(0, 0);
+    this.window.scrollTo({ top: 0, behavior: "smooth" });
 });
-
 
 window.onload = function () {
     document.body.classList.add('no-scroll');
@@ -64,7 +64,6 @@ window.onload = function () {
         delay: 3.5,
         y:'-100%',
         onComplete: function() {
-            // Remove the no-scroll class to enable scrolling
             document.body.classList.remove('no-scroll');
           }
     })

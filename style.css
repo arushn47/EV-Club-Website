@@ -405,6 +405,7 @@ span {
 /* footer */
 
 .footer {
+    height: 50vmin;
     margin-top: 15vmin;
     color: black;
     background-color: #7FFF00;
@@ -501,17 +502,18 @@ span {
 
 .loader-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     font-size: 7vmin;
     font-weight: bold;
-    opacity: 1;
     z-index: 1000;
 }
 
@@ -583,6 +585,14 @@ span {
 
 @media (max-width: 650px) {
 
+    .loader-container {
+        font-size: 6vmin;
+    }
+    
+    .loader-container .space {
+        width: 2vmin;
+    }
+
     #about .text {
         font-size: 2.5vmin;
     }
@@ -628,6 +638,12 @@ span {
 
 @media (max-width: 450px) {
 
+    #header {
+        margin-top: 10vmin;
+        margin-bottom: 10vmin;
+        padding: 0 7vmin;
+    }
+
     .content-wrapper {
         margin: 0 8vmin;
     }
@@ -637,7 +653,7 @@ span {
     }
 
     .side-nav-items {
-        gap: 11vmin;
+        gap: 9vmin;
     }
 
     .sidebar {
@@ -652,6 +668,7 @@ span {
         right: 15px;
         bottom: 15px;
     }
+
     .container {
         padding: 5vmin;
     }

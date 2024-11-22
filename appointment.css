@@ -257,7 +257,6 @@ footer {
     transition: 0.3s ease;
 }
 
-
 .nav a:hover {
     color: white;
 }
@@ -285,13 +284,6 @@ footer {
 }
 
 @media (max-width: 958px) {
-    header {
-        margin-top: 5vmin;
-        padding: 0 10vmin;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 
     .letter-info {
         order: -1;
@@ -302,18 +294,6 @@ footer {
     }   
     .container .nav {
         display: none;
-    }
-}
-
-
-@media (max-width: 500px) {
-    header {
-        margin-top: 10vmin;
-        padding: 0 7vmin;
-    }
-
-    .ham i {
-        font-size: 2vmin;
     }
 }
 

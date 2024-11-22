@@ -1,18 +1,14 @@
-const ham_open = document.querySelector(".ham-open");
+const ham_open = document.querySelector(".ham-open i");
 const ham_close = document.querySelector(".ham-close i");
 const sidebar = document.querySelector(".side-box");
-const homeBtn = document.querySelectorAll(".home");
 const topBtn = document.querySelector(".top-btn i");
 
 let lastScrollTop = 0;
 
 ham_open.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-
-    if (window.innerWidth <= 400 && sidebar.classList.contains("active")) {
+    sidebar.classList.add("active");
+    if (window.innerWidth <= 450 && sidebar.classList.contains("active")) {
         ham_close.classList.add("active");
-    } else {
-        ham_close.classList.remove("active");
     }
 });
 
@@ -41,4 +37,3 @@ window.onscroll = function () {
 topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
-

@@ -112,7 +112,7 @@ span {
 .ham-open i {
     cursor: pointer;
     color: white;
-    font-size: 3vmin;
+    font-size: 3.5vmin;
 }
 
 .ham-close i {
@@ -126,7 +126,7 @@ span {
 }
 
 .ham-close i.active {
-    display: inline-block;
+    display: block;
 }
 
 /* sidebar */
@@ -590,7 +590,7 @@ span {
     }
     
     .loader-container .space {
-        width: 2vmin;
+        width: 1.5vmin;
     }
 
     #about .text {

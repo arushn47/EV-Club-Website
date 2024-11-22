@@ -180,8 +180,7 @@ header {
 /* footer */
 
 footer {
-    left: 0;
-    bottom: 0;
+    height: 50vmin;
     margin-top: 15vmin;
     color: black;
     background-color: #7FFF00;

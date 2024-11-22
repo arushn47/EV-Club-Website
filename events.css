@@ -154,7 +154,7 @@ header {
 }
 
 .event img {
-    height: 450px;
+    height: 500px;
     width: auto;
     object-fit: cover;
     box-shadow: 0 0 10px #7FFF00;
@@ -184,28 +184,28 @@ header {
     border-radius: 5px;
 }
 
-.event-container {
-    margin: 10vmin 0;
+.event-container1 {
+    margin: 5vmin 0;
 }
 
-.event-container button a{
+.event-container1 button a{
     width: fit-content;
-    padding: 5px 40px;
+    padding: 5px 20px;
     border: 1px solid #FFF;
     background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
 
-.event-container button a:hover {
+.event-container1 button a:hover {
     background-color: white;
 }
 
-.event-container button a{
+.event-container1 button a{
     color: white;
 }
 
-.event-container button a:hover {
+.event-container1 button a:hover {
     color: black;
 }
 

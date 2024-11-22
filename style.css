@@ -138,7 +138,7 @@ span {
 
 .side-box {
     position: fixed;
-    top: 12%;
+    top: 16%;
     right: -400px;
     z-index: 1000;
     text-align: center;
@@ -635,7 +635,7 @@ footer {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
 
     .content-wrapper {
         margin: 0 8vmin;

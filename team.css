@@ -8,8 +8,8 @@ html {
 }
 
 body {
-    max-height: 100vh;
-    max-width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     background-color: #191919;
     font-family: "Montserrat", serif;
     color: white;
@@ -31,7 +31,8 @@ header {
 
 .top-btn i {
     cursor: pointer;
-    display: none;
+    opacity: 0;
+    display: block;
     position: fixed;
     right: 40px;
     bottom: 40px;
@@ -39,14 +40,18 @@ header {
     color: black;
     padding: 1.5vmin;
     border-radius: 10px;
-    transition: 0.3s ease;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.top-btn i.show {
+    opacity: 1;
 }
 
 .top-btn i:hover {
     color: #7FFF00;
 }
 
-/*sidebar*/
+/* Sidebar */
 
 .backBtn i {
     cursor: pointer;
@@ -69,13 +74,13 @@ header {
 }
 
 .side-box {
-    position: absolute;
+    position: fixed;
     top: 12%;
     right: -300px;
     z-index: 1000;
     text-align: center;
     margin: auto 0;
-    transition: 0.5s ease;
+    transition: right 0.5s ease;
 }
 
 .side-box.active {
@@ -97,7 +102,7 @@ header {
     padding: 12vmin 0;
 }
 
-.heading h1{
+.heading h1 {
     font-size: 7vmin;
     text-align: center;
     color: #7FFF00;
@@ -115,6 +120,7 @@ header {
     font-size: 25px;
     font-weight: 300;
 }
+
 .batch {
     cursor: pointer;
     display: flex;
@@ -131,7 +137,7 @@ header {
     font-weight: 700;
 }
 
-/* team page */
+/* Team Page */
 
 #team-page {
     display: flex;
@@ -168,9 +174,11 @@ header {
 }
 
 .team-member {
-    flex: 0 0 auto;
-    text-align: center;
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vmin;
 }
 
 .profile-pic img {
@@ -200,19 +208,19 @@ header {
     border: 1px solid #FFF;
     background-color: transparent;
     color: #FFF;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .team-page button:hover {
     background-color: white;
+    transform: scale(1.05);
 }
 
 .team-page button a:hover {
     color: black;
 }
 
-/* footer */
-
+/* Footer */
 footer {
     left: 0;
     bottom: 0;
@@ -221,6 +229,13 @@ footer {
     background-color: #7FFF00;
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .container {

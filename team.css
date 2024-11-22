@@ -225,6 +225,7 @@ header {
 /* Footer */
 
 footer {
+    height: 50vmin;
     color: black;
     background-color: #7FFF00;
     display: flex;

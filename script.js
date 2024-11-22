@@ -38,12 +38,6 @@ window.onscroll = function () {
     lastScrollTop = currentScrollTop;
 };
 
-homeBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        window.scrollTo(0, 0);
-    });
-});
-
 topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });

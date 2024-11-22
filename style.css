@@ -43,11 +43,6 @@ button {
     font-family: "Montserrat", serif;
 }
 
-button :hover {
-    background-color: #FFF;
-    color: black;
-}
-
 span {
     color: #7FFF00;
 }
@@ -139,7 +134,7 @@ span {
 .side-box {
     position: fixed;
     top: 16%;
-    right: -400px;
+    right: -500px;
     z-index: 1000;
     text-align: center;
     transition: 0.3s ease;
@@ -407,12 +402,9 @@ span {
     font-size: 2.6vmin;
 }
 
-
 /* footer */
 
-footer {
-    left: 0;
-    bottom: 0;
+.footer {
     margin-top: 15vmin;
     color: black;
     background-color: #7FFF00;
@@ -421,7 +413,7 @@ footer {
 }
 
 .container {
-    padding: 5vmin;
+    padding: 0 5vmin;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -517,14 +509,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     font-size: 7vmin;
     font-weight: bold;
     opacity: 1;
     z-index: 1000;
 }
 
-.loader-container span {
+.loader-container span  {
     opacity: 0;
 }
 
@@ -635,7 +626,7 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 
     .content-wrapper {
         margin: 0 8vmin;
@@ -660,5 +651,8 @@ footer {
     .top-btn i {
         right: 15px;
         bottom: 15px;
+    }
+    .container {
+        padding: 5vmin;
     }
 }

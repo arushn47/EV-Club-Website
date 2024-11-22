@@ -271,3 +271,14 @@ footer {
     text-align: center;
     margin-bottom: 3vmin;
 }
+
+@media (max-width: 500px) {
+    header {
+        margin-top: 10vmin;
+        padding: 0 7vmin;
+    }
+
+    .ham i {
+        font-size: 2vmin;
+    }
+}
